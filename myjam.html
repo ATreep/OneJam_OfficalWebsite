@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon">
+    <link rel="icon" href="favicon.png">
+    <title>MyJam - OneJam</title>
+    <style>
+        #head {
+            font-size: xxx-large;
+            text-align: left;
+            padding: 30px 50px;
+            background-image: url("imgs/jam_systhesis.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 95%;
+        }
+
+        #head_title {
+            background: linear-gradient(45deg, red, greenyellow, dodgerblue, springgreen, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #workspace {
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 500px;
+        }
+
+        #cupboard {
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .item {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: filter 0.1s ease-in-out;
+        }
+
+        .item:hover {
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand" onclick="window.location.href='index.html'">
+        <img height="35px" src="imgs/logo.svg">
+    </div>
+    <div class="nav">
+        <ul>
+            <li onclick="window.location.href='shopping.html'">
+                Shop
+            </li>
+            <li onclick="window.location.href='cyberjam.html'">
+                CyberJam
+            </li>
+            <li onclick="window.location.href='cooperation.html'">
+                Cooperation
+            </li>
+            <li onclick="window.location.href='myjam.html'">
+                MyJam
+            </li>
+        </ul>
+    </div>
+</header>
+<article>
+    <div id="head" class="bold">
+        <div id="head_title">
+            MyJam,
+            <br>
+            Customize the Jam for Ourselves!
+        </div>
+    </div>
+    <div id="workspace">
+        <div style="border-radius: 50px;background-color: #f6f6f6;flex-basis: 50%;text-align: center;padding: 30px">
+            <div>
+                Choose Fruits for Your Jam
+            </div>
+            <br>
+            <br>
+            <div id="cupboard">
+                <div class="item" onclick="generateJam()">
+                    <img src="imgs/apple.png" width="130">
+                </div>
+                <div class="item" onclick="generateJam()">
+                    <img src="imgs/strawberry.png" width="120">
+                </div>
+                <div class="item" onclick="generateJam()">
+                    <img src="imgs/watermelon.png" width="120">
+                </div>
+                <div class="item" onclick="generateJam()">
+                    <img src="imgs/orange.png" width="120">
+                </div>
+            </div>
+        </div>
+        <div style="flex-basis: 50%;padding: 30px;text-align: center">
+            <div id="default" style="display: block;font-size: 300px;background: linear-gradient(0deg, lightgrey, purple);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+                ?
+            </div>
+            <div id="jam_cup" style="display: none">
+                <div id="jam_title" class="bold">Your Jam Has Finished Making!</div>
+                <br>
+                <img id="jam_pic" width="400px">
+            </div>
+        </div>
+    </div>
+</article>
+<footer>
+    Copyright &copy; 2024 OneJam Org. All rights reserved.
+</footer>
+</body>
+<script src="scripts/global.js"></script>
+<script>
+    function generateJam()
+    {
+        let colorSet = ['red', 'orange', 'yellow', 'green', 'blue', 'grey', 'purple', 'darkgrey', 'greenyellow'];
+        let jamNum = 3;
+        let chooseColor1 = Math.floor(Math.random() * (colorSet.length));
+        let chooseColor2 = Math.floor(Math.random() * (colorSet.length));
+        let chooseJam = Math.floor(Math.random() * (jamNum)) + 1;
+
+        let title_emt = document.getElementById("jam_title");
+        let jam_img_emt = document.getElementById("jam_pic");
+
+        title_emt.setAttribute("style", "background: linear-gradient(45deg, " + colorSet[chooseColor1] + ", " + colorSet[chooseColor2] +");-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size: xx-large");
+        jam_img_emt.setAttribute("src", "imgs/myjam" + chooseJam + ".png");
+
+        document.getElementById("default").style.display = "none";
+        document.getElementById("jam_cup").style.display = "block";
+    }
+</script>
+</html>

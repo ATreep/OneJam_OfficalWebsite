@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon">
+    <link rel="icon" href="favicon.png">
+    <title>CyberJam - OneJam</title>
+    <style>
+      #head {
+          background-color: black;
+          background-image: url("imgs/cyber_jam_factory.jpeg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 500px;
+          height: 500px;
+          text-align: center;
+          color: white;
+      }
+      @keyframes headColorChange {
+          0% {
+              background-color: rgba(0,0,0,1);
+          }
+          100% {
+              background-color: rgba(0,0,0,0.5);
+          }
+      }
+
+      #intro {
+          text-align: left;
+          padding: 10px 50px;
+      }
+
+      #cupboard {
+          display: flex;
+          flex-direction: row;
+          flex-flow: row wrap;
+          justify-content: center;
+      }
+
+      .item {
+          background-color: white;
+          padding: 30px;
+          box-shadow: 3px 3px 3px 3px rgba(223, 223, 223, 0.53);
+          margin: 20px;
+          border-radius: 30px;
+          width: 450px;
+          height: 450px;
+          text-align: left;
+          transition: transform 0.3s ease;
+          cursor: default;
+      }
+
+      .item:hover {
+          transform: scale(1.02);
+          box-shadow: 4px 4px 4px 4px rgba(223, 223, 223, 0.6);
+      }
+    </style>
+</head>
+<body>
+<header>
+  <div class="brand" onclick="window.location.href='index.html'">
+    <img height="35px" src="imgs/logo.svg">
+  </div>
+  <div class="nav">
+    <ul>
+      <li onclick="window.location.href='shopping.html'">
+        Shop
+      </li>
+      <li onclick="window.location.href='cyberjam.html'">
+        CyberJam
+      </li>
+      <li onclick="window.location.href='cooperation.html'">
+        Cooperation
+      </li>
+      <li onclick="window.location.href='myjam.html'">
+        MyJam
+      </li>
+    </ul>
+  </div>
+</header>
+<article>
+    <div id="head">
+        <div style="animation: headColorChange 8s forwards;height: 500px">
+            <div style="height: 300px"></div>
+            <p class="bold" style="font-size: xx-large;opacity: 0.7;margin: 0">
+                Introducing
+            </p>
+            <p class="bold" style="font-size: 100px;margin: 0">
+                CyberJam
+            </p>
+        </div>
+    </div>
+    <br>
+    <div id="intro">
+        <div class="bold" style="font-size: xx-large;">
+            <span>Technologies. </span><span style="color: grey">How we created this creative product.</span>
+        </div>
+        <br>
+        <div id="cupboard">
+            <div class="item" style="background-color: #06d95a">
+                <p style="font-size: small">
+                    ONEJAM 2030
+                </p>
+                <p style="font-size: x-large">
+                    Innovating for you.
+                    <br>
+                    With the earth in mind.
+                </p>
+                <p style="text-align: center">
+                    <img src="imgs/green_earth.jpeg" width="280" height="280">
+                </p>
+            </div>
+
+            <div class="item" style="background-color: white;background-image: url('imgs/assemble.jpeg');background-repeat: no-repeat;background-position: right;background-size: 450px">
+                <p style="font-size: small">
+                    ASSEMBLING
+                </p>
+                <p style="font-size: x-large">
+                    This robot makes the most powerful motor for CyberJam.
+                </p>
+            </div>
+
+            <div class="item" style="background-color: grey;color: white">
+                <p style="font-size: small">
+                    DEVICES
+                </p>
+                <p style="font-size: x-large">
+                    Check CyberJam every time and everywhere on every screen.
+                </p>
+                <p style="text-align: center">
+                    <img src="imgs/jam_on_screen.png" width="280" height="280">
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+<footer>
+  Copyright &copy; 2024 OneJam Org. All rights reserved.
+</footer>
+</body>
+<script src="scripts/global.js"></script>
+</html>

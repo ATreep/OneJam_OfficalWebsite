@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon">
+    <link rel="icon" href="favicon.png">
+    <title>Cooperation - OneJam</title>
+    <style>
+        #apply {
+            text-align: center;
+            padding: 30px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus {
+            border-color: #EB51F7;
+            box-shadow: 0 0 8px rgba(235, 81, 247, 0.6);
+            outline: none;
+        }
+
+        input[type="text"]::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand" onclick="window.location.href='index.html'">
+        <img height="35px" src="imgs/logo.svg">
+    </div>
+    <div class="nav">
+        <ul>
+            <li onclick="window.location.href='shopping.html'">
+                Shop
+            </li>
+            <li onclick="window.location.href='cyberjam.html'">
+                CyberJam
+            </li>
+            <li onclick="window.location.href='cooperation.html'">
+                Cooperation
+            </li>
+            <li onclick="window.location.href='myjam.html'">
+                MyJam
+            </li>
+        </ul>
+    </div>
+</header>
+<article>
+    <div id="apply">
+        <div class="bold" style="font-size: xxx-large">
+            Apply for Cooperation
+        </div>
+        <br>
+        <div style="color: grey;font-size: large">
+            Meet Opportunities. Connect Resources. Achieve Dreams.
+        </div>
+        <div style="padding: 30px">
+            <form>
+                <label>
+                    <input type="text" name="name" placeholder="Full Name*">
+                </label>
+                <label>
+                    <input type="text" name="corporation" placeholder="Corporation Registered Name*">
+                </label>
+                <label>
+                    <input type="text" name="msg" placeholder="Application Message*">
+                </label>
+                <label style="display: flex;flex-direction: row;flex-grow: 1;justify-content: space-between;">
+                    <span>
+                        Cooperation Direction
+                    </span>
+                    <span>
+                        <input type="radio" name="type">Fruit Jam
+                    </span>
+                    <span>
+                        <input type="radio" name="type">CyberJam
+                    </span>
+                </label>
+                <br>
+                <input class="pink-line-button" type="reset" >
+                <input class="pink-line-button" type="submit" >
+            </form>
+        </div>
+    </div>
+</article>
+<footer>
+    Copyright &copy; 2024 OneJam Org. All rights reserved.
+</footer>
+</body>
+<script src="scripts/global.js"></script>
+</html>
