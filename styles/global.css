@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'google-sans-regular';
-    src: url("/fonts/GoogleSans-Regular.ttf");
+    src: url("../fonts/GoogleSans-Regular.ttf");
 }
 
 @font-face {
     font-family: 'google-sans-bold';
-    src: url("/fonts/GoogleSans-Bold.ttf");
+    src: url("../fonts/GoogleSans-Bold.ttf");
 }
 
 .bold {
